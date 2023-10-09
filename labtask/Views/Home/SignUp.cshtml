@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewBag.Title = "SignUp";
+    Layout = "~/Views/Shared/_OuterLayout.cshtml";
+}
+
+
+<h2>SignUp</h2>
+@Html.ValidationSummary()
+
+<form action="" method="post">
+    Name : <input type="text" value="@(Model==null ? "":Model.Name)" name="Name" /><br />
+    <span class="text-danger">@Html.ValidationMessage("Name")</span>
+    <br />
+    user Id: <input type="text" value="@(Model==null ? "":Model.UserId)" name="UserId" placeholder="UserId" />
+    <span class="text-danger">@Html.ValidationMessage("UserId")</span>
+    <br />
+    Password: <input type="password" value="@(Model==null ? "":Model.Password)" name="Password" placeholder="Password" />
+    <span class="text-danger">@Html.ValidationMessage("Password")</span>
+    <br />
+    Id: <input type="text" value="@(Model==null ? "":Model.Id)" name="Id" placeholder="Id" />
+    <span class="text-danger">@Html.ValidationMessage("Id")</span>
+    <br />
+    Email: <input type="email" value="@(Model==null ? "":Model.Email)" name="Email" placeholder="Email" />
+    <span class="text-danger">@Html.ValidationMessage("Email")</span>
+    <br />
+    <br />
+    Date of birth: <input type="date" value="@(Model==null ? "":Model.DoB.ToString("yyyy-MM-dd"))" name="DoB" />
+    <span class="text-danger">@Html.ValidationMessage("DoB")</span>
+    <br />
+
+
+    <input type="submit" value="Sign Up" class="btn btn-success" />
+
+
+</form>
+<!-- Include Popper.js and Bootstrap JS from CDNs -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
